@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre proyecto:</strong>
+  <%= @proyecto.nombre_proy %>
+</p>
+
+<p>
+  <strong>Ubicacion proyecto:</strong>
+  <%= @proyecto.ubicacion_proy %>
+</p>
+
+
+<p>
+  <strong>Precio base:</strong>
+  <%= @proyecto.precio_base %>
+</p>
+
+<p>
+  <strong>Foto proyecto:</strong >
+   <br>
+
+<% (0...@proyecto.foto_proy.count).each do |foto_proy| %>
+  <%= image_tag(@proyecto.foto_proy[foto_proy]) %> 
+<% end %>
+</p>
+
+<%= link_to 'Editar', edit_proyecto_path(@proyecto) %> |
+<%= link_to 'Atrás', proyectos_path %>

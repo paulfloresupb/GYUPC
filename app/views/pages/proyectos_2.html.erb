@@ -1,0 +1,32 @@
+<!-- primero queremos dividirlo en 3 para saber cuantas veces se crea -->
+        <% n = @proyectos.count/3 %>
+        <% count = 0 %>
+        <% n.downto(0) do %>
+          <!-- Creamos la fila -->
+
+          <div class="row">
+              <!-- Creamos maximo 3 columnas y sale -->
+                <% 3.downto(0) do |i| %>
+                    <!-- Verificamos que el  count no sea mayor a la cantidad de proyectos
+                    para evitar error -->
+                    <% if count == @proyectos.count %>
+                    <% break %>
+                    <% end %>
+                    <!-- Obtenemos el proyectos que toca -->
+                     <% proyectos = @proyectos[count] %>
+                    <!-- Utilizamos el proyectos -->
+                    <div class="card">
+
+                        <p>Insertar imagen como en clase</p>
+                        <div class="col-sm-9">
+                         
+                          <h5 class="card-title"><%= proyectos.nombre_proy %></h5>
+                          <p class="card-text"><%= proyectos.descrip_proy %></p>
+                          <a href="/pages/proyectos" class="btn btn-primary">Ir</a>
+                        </div>
+                    </div>
+                    <!-- Aumentamos la posición para que en la siguiente utilice el siguiente proyectos -->
+                    <% count += 1 %>
+                <% end %>
+              </div>
+            <% end %>

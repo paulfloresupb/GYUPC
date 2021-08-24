@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_proy: MyString
+  ubicacion_proy: MyText
+  precio_base: MyText
+  foto_proy: MyText
+
+two:
+  nombre_proy: MyString
+  ubicacion_proy: MyText
+  precio_base: MyText
+  foto_proy: MyText

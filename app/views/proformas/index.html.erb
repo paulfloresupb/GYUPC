@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <p id="notice"><%= notice %></p>
+
+      <h1>Proformas</h1>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>DNI</th>
+          <th>Celular</th>
+          <th>Email</th>
+          <th>Proyecto</th>
+          <th>Piso</th>
+          <th>Costo M2</th>
+          <th>Area Total</th>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @proformas.each do |proforma| %>
+          <tr>
+            <td><%= proforma.no_cliente %></td>
+            <td><%= proforma.nu_dni %></td>
+            <td><%= proforma.nu_celular %></td>
+            <td><%= proforma.email_cliente %></td>
+            <td><%= proforma.no_proyecto %></td>
+            <td><%= proforma.numero_piso %></td>
+            <td><%= proforma.costo_m2 %></td>
+            <td><%= proforma.area_total %></td>
+            <td><%= link_to 'Show', proforma %></td>
+            <td><%= link_to 'Edit', edit_proforma_path(proforma) %></td>
+            <td><%= link_to 'Destroy', proforma, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+
+      <br>
+
+      <%= link_to 'Nueva Proforma', new_proforma_path, id: "bt_new_proforma", class: "btn btn-success " %>
+
+    </div>
+  </div>
+</div>

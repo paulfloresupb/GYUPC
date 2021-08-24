@@ -1,0 +1,43 @@
+<%= content_for :head do %>
+  <title>Acceder</title>
+<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-9">
+      <form name="frmcontactosl">
+
+      </form>
+
+      <h2 class="separar">Ingrese sus credenciales</h2>
+      <form name="frmcontactanosl" onSubmit="return mensaje()">
+        <table>
+          <tr>
+            <td>Usuario:</td>
+            <td> <input type="text" name="txtNombre" class="color-fondo" /></td>
+          </tr>
+          <tr>
+            <td>Contraseña:</td>
+            <td> <input type="text" name="txtContraseña" class="color-fondo" /></td>
+          </tr>
+
+
+          <tr>
+            <td><input type="submit" name="btnAceptar" value="Aceptar"></td>
+            <td><input type="button" name="btnCancelar" value="Cancelar" onClick="alert('envio cancelado')"></td>
+
+
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-9">
+      <a class="btn btn-info" href="/proyectos">Proyectos</a>
+      <a class="btn btn-success" href="/proformas">Proformas</a>
+      <a class="btn btn-warning" href="/cita">cita</a>
+      <a class="btn btn-secondary" href="/estados">estados</a>
+      <a class="btn btn-outline-primary" href="/asesors">asesors</a>
+    </div>
+  </div>
+</div>

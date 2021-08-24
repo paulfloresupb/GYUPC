@@ -1,0 +1,70 @@
+
+<%= form_with(model: citum, local: true) do |form| %>
+  <% if citum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(citum.errors.count, "error") %> prohibited this citum from being saved:</h2>
+
+      <ul>
+        <% citum.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+   <div class="form-group">
+    <%= form.label :dni %>
+    <%= form.text_field :dni, {:class => "form-control", :placeholder => "Ingrese DNI/Carnet de extranjeria", :requerid =>
+      "requerid"} %>
+     
+  </div>
+
+   <div class="form-group">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, {:class => "form-control", :placeholder => "Ingrese nombre", :requerid =>
+      "requerid"} %>
+
+  </div>
+
+   <div class="form-group">
+    <%= form.label :apellido %>
+     <%= form.text_field :apellido, {:class => "form-control", :placeholder => "Ingrese apellido", :requerid =>
+      "requerid"} %>
+
+  </div>
+
+   <div class="form-group">
+    <%= form.label :correo %>
+    <%= form.text_field :correo, {:class => "form-control", :placeholder => "Ingrese correo", :requerid =>
+      "requerid"} %>
+  </div>
+
+   <div class="form-group">
+    <%= form.label :telefono %>    
+    <%= form.number_field :telefono %>
+
+  </div>
+
+ <div class="form-group">
+    <%= form.label :fechaCita %>
+    <%= form.date_select :fechaCita %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :horaCita %>
+    <%= form.time_select :horaCita %>
+  </div>
+
+   <div class="form-group">
+    <%= form.label :estado_id %>
+    <%= form.text_field :estado_id %>
+  </div>
+
+   <div class="form-group">
+    <%= form.label :asesor_id %>
+    <%= form.text_field :asesor_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

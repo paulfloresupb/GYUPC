@@ -1,0 +1,14 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+     	<h1>Nuevo Departamento</h1>
+     	<%= form_with(model: @departamento , :url => departamentos_path(:proyecto_id => @proyecto.id), local: true) do |form| %>
+
+	<%= render( :partial => "form", :locals => { :form => form }) %>
+
+	<%= link_to 'Atrás',  departamentos_path(:proyecto_id => @proyecto.id) %>
+<% end %>
+    </div>
+  </div>
+</div>

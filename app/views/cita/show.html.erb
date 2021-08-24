@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dni:</strong>
+  <%= @citum.dni %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @citum.nombre %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @citum.apellido %>
+</p>
+
+<p>
+  <strong>Correo:</strong>
+  <%= @citum.correo %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @citum.telefono %>
+</p>
+
+<p>
+  <strong>Fecha Cita:</strong>
+  <%= @citum.fechaCita %>
+</p>
+
+<p>
+  <strong>Hora Cita:</strong>
+  <%= @citum.horaCita %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @citum.estado_id %>
+</p>
+
+<p>
+  <strong>Asesor:</strong>
+  <%= @citum.asesor_id %>
+</p>
+
+<%= link_to 'Editar', edit_citum_path(@citum) %> |
+<%= link_to 'Regresar', cita_path %>

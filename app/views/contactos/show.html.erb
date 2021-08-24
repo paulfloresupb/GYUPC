@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre contact:</strong>
+  <%= @contacto.nombre_contact %>
+</p>
+
+<p>
+  <strong>Apellido contact:</strong>
+  <%= @contacto.apellido_contact %>
+</p>
+
+<p>
+  <strong>Email contact:</strong>
+  <%= @contacto.email_contact %>
+</p>
+
+<p>
+  <strong>Telef contact:</strong>
+  <%= @contacto.telef_contact %>
+</p>
+
+<p>
+  <strong>Consulta contact:</strong>
+  <%= @contacto.consulta_contact %>
+</p>
+
+<%= link_to 'Edit', edit_contacto_path(@contacto) %> |
+<%= link_to 'Back', contactos_path %>

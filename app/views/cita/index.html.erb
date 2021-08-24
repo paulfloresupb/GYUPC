@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-14">
+      <p id="notice"><%= notice %></p>
+
+      <h1>Citas</h1>
+      <table class="table-hover table-striped table-bordered" >
+        <thead>
+        <tr>
+          <th>Dni</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Correo</th>
+          <th>Telefono</th>
+          <th>Fecha Cita</th>
+          <th>Hora Cita</th>
+          <th>Estado</th>
+          <th>Asesor</th>
+          <th colspan="3">Opciones</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% @cita.each do |citum| %>
+          <tr>
+            <td><%= citum.dni %></td>
+            <td><%= citum.nombre %></td>
+            <td><%= citum.apellido %></td>
+            <td><%= citum.correo %></td>
+            <td><%= citum.telefono %></td>
+            <td><%= citum.fechaCita %></td>
+            <td><%= citum.horaCita %></td>
+            <td><%= citum.estado_id %></td>
+            <td><%= citum.asesor_id %></td>
+            <td><%= link_to 'Mostrar', citum %></td>
+            <td><%= link_to 'Editar', edit_citum_path(citum) %></td>
+            <td><%= link_to 'Eliminar', citum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+
+      <br>
+
+      <%= link_to 'Nueva Cita', new_citum_path, class: "btn btn-success" %>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_dep: MyString
+  piso_dep: 1
+  area: MyText
+  nro_habitacion: 1
+  foto_dep: MyText
+
+two:
+  nombre_dep: MyString
+  piso_dep: 1
+  area: MyText
+  nro_habitacion: 1
+  foto_dep: MyText

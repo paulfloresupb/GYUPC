@@ -1,0 +1,13 @@
+version: "2"
+networks:
+  devnet:
+    driver: bridge
+services:
+  web:
+    build: .
+    image: niels58/constructoragyupc:v1
+    restart: always
+    ports:
+    - "80:3000"
+    networks:
+      - devnet

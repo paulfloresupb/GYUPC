@@ -1,0 +1,35 @@
+<%= content_for :head do %>
+  <title>Contáctenos</title>
+<% end %>
+
+<%= content_for :intro do %>
+  <h3>Contáctenos</h3>
+  <p>Para contactarnos debe ingresar sus datos en el siguiente formulario</p>
+
+<% end %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+      <form>
+        <div class="form-group">
+          <label class="exampleInputName">Ingrese aquí su nombre o RUC</label>
+          <input type="text" id="exampleInputName" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail">Ingresa tu correo electrónico</label>
+          <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+          <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+       <div class="form-group">
+        <label for="exampleFormControlTextarea1">Escriba aquí su consulta</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+        <button type="submit" class="btn btn-primary">Enviar un mensaje</button>
+      </form>
+    </div>
+    <div class="col-4">
+      <iframe width="400" height="250" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Universidad%20Peruana%20de%20Ciencias%20Aplicadas&key=AIzaSyA-mX5Z7eJL5GKASzo5gSNavXxX748a5Y4" allowfullscreen> </iframe>
+    </div>
+  </div>
+</div>

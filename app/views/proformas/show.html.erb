@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>No cliente:</strong>
+  <%= @proforma.no_cliente %>
+</p>
+
+<p>
+  <strong>Nu dni:</strong>
+  <%= @proforma.nu_dni %>
+</p>
+
+<p>
+  <strong>Nu celular:</strong>
+  <%= @proforma.nu_celular %>
+</p>
+
+<p>
+  <strong>Email cliente:</strong>
+  <%= @proforma.email_cliente %>
+</p>
+
+<p>
+  <strong>No proyecto:</strong>
+  <%= @proforma.no_proyecto %>
+</p>
+
+<p>
+  <strong>Numero piso:</strong>
+  <%= @proforma.numero_piso %>
+</p>
+
+<p>
+  <strong>Costo m2:</strong>
+  <%= @proforma.costo_m2 %>
+</p>
+
+<p>
+  <strong>Area total:</strong>
+  <%= @proforma.area_total %>
+</p>
+
+<%= link_to 'Edit', edit_proforma_path(@proforma) %> |
+<%= link_to 'Back', proformas_path %>

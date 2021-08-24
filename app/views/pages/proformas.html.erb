@@ -1,0 +1,117 @@
+<div class="container">
+    <h3>Proformas</h3>
+    <br>
+    <div class="row">
+        <div class="col-6">
+            <fieldset>
+                <legend>Datos Cliente</legend>
+                <form id="form-cliente-proforma">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Cliente :</label>
+                        <input type="text" id="cliente-name" class="form-control" placeholder="Nombre de cliente">
+                    </div>
+                    <div class="form-group">
+                        <label for="dni">DNI :</label>
+                        <input type="text" id="cliente-dni" class="form-control" size="10" maxlength="8" placeholder="12345678">
+                    </div>
+                    <div class="form-group">
+                        <label for="celular">Celular :</label>
+                        <input type="text" id="cliente-celular" class="form-control" size="10" maxlength="11" placeholder="+51999888777">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="cliente-email" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btn-success" id="btn-enviar" value="Enviar">
+                    </div>
+            </fieldset>
+        </div>
+        <div class="col-6">
+            <fieldset>
+                <legend>Datos Departamento</legend>
+
+                <div class="form-group">
+                    <label for="proyecto">Proyecto</label>
+                    <div class="form-group">
+                        <select id="proyecto" class="custom-select">
+                            <option selected>Choose...</option>
+                            <option value="San Isidro">San Isidro</option>
+                            <option value="Barranco">Barranco</option>
+                            <option value="San Miguel">San Miguel</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="costo-m2">Costo por M2 :</label>
+                    <input type="text" id="costo-m2" class="form-control" placeholder="120.5">
+                </div>
+                <div class="form-group">
+                    <label for="area">Área Total Departamento :</label>
+                    <input type="text" id="area" class="form-control" placeholder="80">
+                </div>
+                <div class="form-group">
+                    <label for="piso">Número de Piso :</label>
+                    <input type="number" id="piso" class="form-control" placeholder="14">
+                </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-9">
+            <!-- Button trigger modal -->
+            <!-- <button type="button" id="form-modal" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                Enviar
+            </button>-->
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Proforma</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-6">Cliente</div>
+                                <div class="col-6">
+                                    <p id="cliente-name-text">
+                                        Cliente
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    Proyecto:
+                                </div>
+                                <div class="col-6">
+                                    <p id="proyecto-text">proyecto</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">Piso</div>
+                                <div class="col-6">
+                                    <p id="piso-text">5</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">Costo Total</div>
+                                <div class="col-6">
+                                    <p id="costo-total">$500</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,127 @@
+<%= content_for :head do %>
+  <title>Listar departamentos</title>
+<% end %>
+
+<div class="container">
+
+<div class="row mb-4 mt-4">
+      <div class="col-sm-12">
+        <h1>Departamentos</h1>
+      </div>
+    </div>
+
+
+    <div class="row">
+     
+        <div class="col-sm-3">
+            <h4>Proyecto</h4>
+                <div class="form-group">
+                <label for="sel1">Nombre de Proyecto:</label>
+                <select class="form-control" id="sel1">
+                    <option>Barranco-1</option>
+                    <option>San Borja-Torre 2</option>
+                    <option>San Miguel</option>
+                </select>
+                </div>
+                <br><br> 
+
+            <h4>Ubicación</h4>
+                <div class="form-group">
+                <label for="sel1">Distrito:</label>
+                <select class="form-control" id="sel1">
+                    <option>Barranco</option>
+                    <option>San Borja</option>
+                    <option>San Miguel</option>
+                </select>
+                </div> 
+                <br><br> 
+
+            <h4>Habitaciones</h4>
+                <div class="number-input md-number-input">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                <input class="quantity" min="0" name="quantity" value="1" type="number">
+                <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                </div>
+                <br><br> 
+
+            <h4>Precio</h4>
+                <div class="row">
+                    <div class="col-sm-6" class="radio">
+                    <label><input type="radio" name="optradio" checked>Soles </label>
+                        <!-- Material input -->
+                        <div class="md-form">
+                        <input type="number" id="numberExample" class="form-control">
+                        <label for="numberExample">Desde</label>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6" class="radio">
+                    <label><input type="radio" name="optradio">Dólares</label>
+                        <!-- Material input -->
+                        <div class="md-form">
+                        <input type="number" id="numberExample" class="form-control">
+                        <label for="numberExample">Hasta</label>
+                        </div>
+                    </div>
+                </div>
+            <br><br>
+            
+            <input type="button" class="btn btn-success" class="btn btn-info" value="Enviar">
+
+
+        </div>
+
+        <div class="col-sm-9">
+            <div class="row">
+                <div class="col-sm-6">
+                    <a href="/pages/detalledpto">
+                    <div class="row">                        
+                        <%= image_tag "espacios.jpg", :class => "img-thumbnail", :class => "d-block w-75",  html: { alt: "dpto60" }%>
+                    </div>
+                    </a>
+                    <br>
+                    <p>Proyecto: XXXXX</p>
+                    <div class=row>                
+                        <div class="col-sm-6">                
+                            <li>2 dormitorios</li>
+                            <li>Cocina americana</li>
+                            <li>2 baños</li>
+                        </div>
+                        <div class="col-sm-6">
+                            <li>1 closet</li>
+                            <li>Sala</li>
+                            <li>Acceso a todas las áreas</li>
+                        </div>
+                    </div>                    
+                </div>
+
+                <div class="col-sm-6"> 
+                        <a href="/pages/detalledpto">
+                        <div class="row">                        
+                            <%= image_tag "espacios.jpg", :class => "img-thumbnail", :class => "d-block w-75",  html: { alt: "dpto60" }%>
+                        </div>
+                        </a>
+                        <br>
+                        <p>Proyecto: XXXXX</p>
+                        <div class=row>                
+                            <div class="col-sm-6">                
+                                <li>2 dormitorios</li>
+                                <li>Cocina americana</li>
+                                <li>2 baños</li>
+                            </div>
+                            <div class="col-sm-6">
+                                <li>1 closet</li>
+                                <li>Sala</li>
+                                <li>Acceso a todas las áreas</li>
+                            </div>
+                        </div>      
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre departamento:</strong>
+  <%= @departamento.nombre_dep %>
+</p>
+
+<p>
+  <strong>Piso:</strong>
+  <%= @departamento.piso_dep %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @departamento.area %>
+</p>
+
+<p>
+  <strong>Nro habitacion:</strong>
+  <%= @departamento.nro_habitacion %>
+</p>
+
+<p>
+  <strong>Foto departamento:</strong > <br>
+
+  <% (0...@departamento.foto_dep.count).each do |foto_dep| %>
+  <%= image_tag(@departamento.foto_dep[foto_dep]) %> 
+
+<% end %>
+  </p>
+<%= link_to 'Editar', edit_departamento_path(@departamento) %> |
+<%= link_to 'Atrás', departamentos_path(:proyecto_id => @proyecto.id) %>

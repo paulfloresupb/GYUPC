@@ -1,0 +1,45 @@
+
+          <% if @departamento.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@departamento.errors.count, "error") %> prohibited this departamento from being saved:</h2>
+
+              <ul>
+                <% @departamento.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+    <div class="form-group">
+      <%= form.text_field :nombre_dep, { :class => "form-control", :placeholder => "Ingrese nombre de proyecto" } %>
+    </div>
+
+    <div class="form-group">
+      <%= form.number_field :piso_dep, { :class => "form-control", :placeholder => "Número de piso" } %>
+    </div>
+
+    <div class="form-group">
+      <%= form.text_area :area, { :class => "form-control", :placeholder => "Área" } %>
+    </div>
+
+    <div class="form-group">
+      <%= form.number_field :nro_habitacion, { :class => "form-control", :placeholder => "Número de habitaciones" } %>
+    </div>
+
+    <div class="form-group">
+      
+      <%= form.object.proyecto.nombre_proy %>
+    </div>
+
+    <div>
+
+          <th>Cargar imágen</th>
+          <td>
+           <%= form.file_field :foto_dep, multiple: true %>
+          </td>
+    </div>
+
+  <div class="actions">
+    <%= form.submit "Guardar", :class=> "btn btn-success" %>
+  </div>
